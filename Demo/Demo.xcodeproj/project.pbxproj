@@ -12,6 +12,9 @@
 		B7CE395F224677D900AD427D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CE395D224677D900AD427D /* Main.storyboard */; };
 		B7CE3961224677DA00AD427D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CE3960224677DA00AD427D /* Assets.xcassets */; };
 		B7CE3964224677DA00AD427D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CE3962224677DA00AD427D /* LaunchScreen.storyboard */; };
+		B7CE399322467BDF00AD427D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE398E22467BDF00AD427D /* UIView+Extension.swift */; };
+		B7CE399422467BDF00AD427D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE398F22467BDF00AD427D /* UITableView+Extension.swift */; };
+		B7CE399522467BDF00AD427D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7CE399122467BDF00AD427D /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,10 @@
 		B7CE3965224677DA00AD427D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7CE396A224677DA00AD427D /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CE3975224677DA00AD427D /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CE398E22467BDF00AD427D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B7CE398F22467BDF00AD427D /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		B7CE399122467BDF00AD427D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7CE399222467BDF00AD427D /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +78,8 @@
 		B7CE394D224677D900AD427D = {
 			isa = PBXGroup;
 			children = (
+				B7CE398D22467BDF00AD427D /* Extensions */,
+				B7CE399022467BDF00AD427D /* Sources */,
 				B7CE3958224677D900AD427D /* Demo */,
 				B7CE3957224677D900AD427D /* Products */,
 			);
@@ -97,6 +106,26 @@
 				B7CE3965224677DA00AD427D /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		B7CE398D22467BDF00AD427D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7CE398E22467BDF00AD427D /* UIView+Extension.swift */,
+				B7CE398F22467BDF00AD427D /* UITableView+Extension.swift */,
+			);
+			name = Extensions;
+			path = ../Template/Extensions;
+			sourceTree = "<group>";
+		};
+		B7CE399022467BDF00AD427D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B7CE399122467BDF00AD427D /* Info.plist */,
+				B7CE399222467BDF00AD427D /* Template.h */,
+			);
+			name = Sources;
+			path = ../Template/Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CE399522467BDF00AD427D /* Info.plist in Resources */,
 				B7CE3964224677DA00AD427D /* LaunchScreen.storyboard in Resources */,
 				B7CE3961224677DA00AD427D /* Assets.xcassets in Resources */,
 				B7CE395F224677D900AD427D /* Main.storyboard in Resources */,
@@ -230,8 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CE399322467BDF00AD427D /* UIView+Extension.swift in Sources */,
 				B7CE395C224677D900AD427D /* ViewController.swift in Sources */,
 				B7CE395A224677D900AD427D /* AppDelegate.swift in Sources */,
+				B7CE399422467BDF00AD427D /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 		B7CE39442246779700AD427D /* Template.h in Headers */ = {isa = PBXBuildFile; fileRef = B7CE39362246779700AD427D /* Template.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7CE398A224679FD00AD427D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE3989224679FD00AD427D /* UIView+Extension.swift */; };
 		B7CE398C22467A8700AD427D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE398B22467A8700AD427D /* UITableView+Extension.swift */; };
+		B7CE399622467DB600AD427D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7CE39372246779700AD427D /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +58,9 @@
 		B7CE39292246779700AD427D = {
 			isa = PBXGroup;
 			children = (
+				B7CE39342246779700AD427D /* Products */,
 				B7CE39352246779700AD427D /* Template */,
 				B7CE39402246779700AD427D /* TemplateTests */,
-				B7CE39342246779700AD427D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,8 +85,8 @@
 		B7CE39402246779700AD427D /* TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7CE39412246779700AD427D /* TemplateTests.swift */,
 				B7CE39432246779700AD427D /* Info.plist */,
+				B7CE39412246779700AD427D /* TemplateTests.swift */,
 			);
 			path = TemplateTests;
 			sourceTree = "<group>";
@@ -93,17 +94,17 @@
 		B7CE3987224679B600AD427D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B7CE39362246779700AD427D /* Template.h */,
 				B7CE39372246779700AD427D /* Info.plist */,
+				B7CE39362246779700AD427D /* Template.h */,
 			);
-			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		B7CE3988224679CC00AD427D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B7CE3989224679FD00AD427D /* UIView+Extension.swift */,
 				B7CE398B22467A8700AD427D /* UITableView+Extension.swift */,
+				B7CE3989224679FD00AD427D /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CE399622467DB600AD427D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +375,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Template/Info.plist;
+				INFOPLIST_FILE = Template/Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,7 +401,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Template/Info.plist;
+				INFOPLIST_FILE = Template/Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
