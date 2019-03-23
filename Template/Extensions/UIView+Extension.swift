@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIView {
-    @IBInspectable var cornerRadius: CGFloat {
+public extension UIView {
+    @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -18,7 +18,7 @@ extension UIView {
             layer.masksToBounds = newValue > 0
         }
     }
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable public var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -26,7 +26,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         get {
             return UIColor(cgColor: self.layer.borderColor!)
         }
@@ -34,7 +34,7 @@ extension UIView {
             self.layer.borderColor = newValue?.cgColor
         }
     }
-    @IBInspectable var shadowOffset: CGSize {
+    @IBInspectable public var shadowOffset: CGSize {
         get {
             return layer.shadowOffset
         }
@@ -42,7 +42,7 @@ extension UIView {
             layer.shadowOffset = newValue
         }
     }
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable public var shadowColor: UIColor? {
         get {
             return UIColor(cgColor: self.layer.shadowColor!)
         }
@@ -50,7 +50,7 @@ extension UIView {
             layer.shadowColor = newValue?.cgColor
         }
     }
-    @IBInspectable var shadowRadius: CGFloat {
+    @IBInspectable public var shadowRadius: CGFloat {
         get {
             return layer.shadowRadius
         }
@@ -60,21 +60,21 @@ extension UIView {
     }
 }
 
-protocol NibInitializable {}
+public protocol NibInitializable {}
 
-extension NibInitializable where Self: UIView {
-    static func loadFromNib(index: Int = 0) -> Self {
+public extension NibInitializable where Self: UIView {
+    public static func loadFromNib(index: Int = 0) -> Self {
         guard let view = UINib(nibName: String(describing: self), bundle: nil).instantiate(withOwner: self, options: nil)[index] as? Self else {
             fatalError("Invalid Nib name")
         }
         return view
     }
     
-    static var nib: UINib {
+    public static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
-    static var name: String {
+    public static var name: String {
         return String(describing: self)
     }
 }

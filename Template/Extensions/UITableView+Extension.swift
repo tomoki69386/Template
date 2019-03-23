@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     
     /// Registers a class for use in creating new table cells.
-    func register<Cell: UITableViewCell>(_ cellClass: Cell.Type) {
+    public func register<Cell: UITableViewCell>(_ cellClass: Cell.Type) {
         register(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
     }
     
-    func dequeueReusableCell<Cell: UITableViewCell>(of cellClass: Cell.Type, for indexPath: IndexPath) -> Cell {
+    public func dequeueReusableCell<Cell: UITableViewCell>(of cellClass: Cell.Type, for indexPath: IndexPath) -> Cell {
         guard let cell = dequeueReusableCell(withIdentifier: cellClass.reuseIdentifier, for: indexPath) as? Cell else {
             assertionFailure("\(Cell.self) が登録されていません")
             register(cellClass.self)
@@ -25,12 +25,12 @@ extension UITableView {
     }
     
     /// Registers a class for use in creating new table header or footer views.
-    func register<HeaderFooter: UITableViewHeaderFooterView>(_ headerFooterClass: HeaderFooter.Type) {
+    public func register<HeaderFooter: UITableViewHeaderFooterView>(_ headerFooterClass: HeaderFooter.Type) {
         register(headerFooterClass, forHeaderFooterViewReuseIdentifier: headerFooterClass.reuseIdentifier)
     }
     
     /// To use this method, you need to register header or footer view by using register(_ headerFooterClass:) method.
-    func dequeueReusableHeaderFooterView<HeaderFooter: UITableViewHeaderFooterView>(of headerFooterClass: HeaderFooter.Type) -> HeaderFooter? {
+    public func dequeueReusableHeaderFooterView<HeaderFooter: UITableViewHeaderFooterView>(of headerFooterClass: HeaderFooter.Type) -> HeaderFooter? {
         guard let view = dequeueReusableHeaderFooterView(withIdentifier: headerFooterClass.reuseIdentifier) else { return nil }
         guard let headerFooter = view as? HeaderFooter else {
             assertionFailure("\(HeaderFooter.self) が登録されていません。")
@@ -41,11 +41,11 @@ extension UITableView {
     }
 }
 
-protocol Reusable: class {
+public protocol Reusable: class {
     static var reuseIdentifier: String { get }
 }
 
-extension Reusable {
+public extension Reusable {
     static var reuseIdentifier: String {
         return NSStringFromClass(self)
     }
