@@ -10,6 +10,7 @@
 		B7CE393D2246779700AD427D /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CE39332246779700AD427D /* Template.framework */; };
 		B7CE39422246779700AD427D /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE39412246779700AD427D /* TemplateTests.swift */; };
 		B7CE39442246779700AD427D /* Template.h in Headers */ = {isa = PBXBuildFile; fileRef = B7CE39362246779700AD427D /* Template.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7CE398A224679FD00AD427D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE3989224679FD00AD427D /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B7CE393C2246779700AD427D /* TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CE39412246779700AD427D /* TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTests.swift; sourceTree = "<group>"; };
 		B7CE39432246779700AD427D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7CE3989224679FD00AD427D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,8 @@
 		B7CE39352246779700AD427D /* Template */ = {
 			isa = PBXGroup;
 			children = (
-				B7CE39362246779700AD427D /* Template.h */,
-				B7CE39372246779700AD427D /* Info.plist */,
+				B7CE3988224679CC00AD427D /* Extensions */,
+				B7CE3987224679B600AD427D /* Sources */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -84,6 +86,23 @@
 				B7CE39432246779700AD427D /* Info.plist */,
 			);
 			path = TemplateTests;
+			sourceTree = "<group>";
+		};
+		B7CE3987224679B600AD427D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B7CE39362246779700AD427D /* Template.h */,
+				B7CE39372246779700AD427D /* Info.plist */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B7CE3988224679CC00AD427D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7CE3989224679FD00AD427D /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 				TargetAttributes = {
 					B7CE39322246779700AD427D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					B7CE393B2246779700AD427D = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CE398A224679FD00AD427D /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 		B7CE39482246779700AD427D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomoki.Template;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +388,7 @@
 		B7CE39492246779700AD427D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +413,7 @@
 		B7CE394B2246779700AD427D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +431,7 @@
 		B7CE394C2246779700AD427D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
